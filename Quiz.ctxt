@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=javax.swing.JPanel\ createQuizPane()
+comment1.params=
+comment1.target=javax.swing.JPanel\ createScorePane()
+comment2.params=e
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=
+comment3.target=void\ createAndShowGUI()
+comment4.params=
+comment4.target=void\ main()
+comment5.params=
+comment5.target=void\ run()
+numComments=6
