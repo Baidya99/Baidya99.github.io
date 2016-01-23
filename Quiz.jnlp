@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<jnlp spec="1.0+" codebase="file:///C:/Users/BAIDYANATH/OneDrive/Documents/Git" href="Quiz.jnlp">
+<jnlp spec="1.0+" codebase="http://baidya99.github.io/" href="Quiz.jnlp">
 	<information>
 		<title>Quiz</title>
 		<vendor>Baidyanath Kundu</vendor>
-		<homepage href="" />
+		<homepage href="http://baidya99.github.io/" />
 		<description>FOSSQuiz</description>
 	</information>
 	<security>
