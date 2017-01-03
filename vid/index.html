@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width; height=device-height;">
+  <link rel="stylesheet" href="resource://gre/res/TopLevelVideoDocument.css">
+  <link rel="stylesheet" href="chrome://global/skin/media/TopLevelVideoDocument.css">
+  <script type="text/javascript;version=1.8" src="chrome://global/content/TopLevelVideoDocument.js"></script>
+  <title>Piano</title>
+</head>
+<body style="width:100%;height:100%;background-color: rgb(33,33,33);backgroung-image: url("chrome://global/skin/media/imagedoc-darknoise.png")">
+  <video src="piano.mp4" autoplay="" controls=""></video>
+  <script>
+    var r = new XMLHttpRequest();
+    r.onload = function() {
+      myVid.src = URL.createObjectURL(r.response);
+      myVid.play();
+    };
+    if (myVid.canPlayType('video/mp4')) {
+      r.open("GET", "piano.mp4");
+    }
+    else {
+      alert("Can't Play Video");
+    }
+
+    r.responseType = "blob";
+    r.send();
+  </script>
+</body>
