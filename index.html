@@ -1,11 +1,148 @@
 <!DOCTYPE html>
 <html>
-<body style="background-color: black;">
+  <head>
+    <title>Baidyanath's Blog</title>
+    <link rel="stylesheet" href="index.css" type="text/css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya|Josefin+Sans:700|Megrim|Raleway:200i,400|Tillana" rel="stylesheet">
+    <link rel="icon" type="image/png" href="http://baidyak.tk/images/icon.png">
+    <link rel="stylesheet" href="http://baidyak.tk/font-awesome/css/font-awesome.min.css">
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <header id="H" class="wtext">
+      <a href="http://baidya99.github.io"><img id="icon" class="big" src="http://baidyak.tk/images/icon.svg"></img></a>
+      <div class="space"><span></span></div>
+      <div class="bs">
+        <span><a href="#cm">About</a></span>
+      </div>
+      <div class="bs">
+        <span><a href="">Interest</a></span>
+      </div>
+      <div class="bs">
+        <span><a href="">Games</a></span>
+      </div>
+      <div class="bs">
+        <span><a href="">Creations</a></span>
+      </div>
+      <span class="fa-lg" onclick="openNav()" id="menu"><i class="fa fa-navicon" style="color:inherit;font-size:30px;"></i></span>
+    </header>
+    <div id="myNav" class="overlay">
+      <div class="overlay-content">
+        <a href="#">Creations</a>
+        <a href="#">Games</a>
+        <a href="#">Interest</a>
+        <a href="#cm">About</a>
+      </div>
+    </div>
+    <div id="topic">
+      <span id="heading">Baidyanath's Blog</span>
+    </div>
+    <div id="container">
+      <span id="date">1st January 2017</span>
+      <h1>About</h1>
+      <p>Hi</p>
 
-<div style="margin-top: 300px;font-family: 'Lucida Console', Monaco, monospace; font-size: 50px;">
-<h1 style="text-align: center;color: white"> Let's take a quiz<h1>
-</div>
-<p style="position: absolute;text-align: center; top: 600px; left: 600px; right: 600px;"><a style="text-align: center;padding: 24px 32px; border: 0px; color: white; background-color: #4CAF50; font-size: 25px;"href="Quiz.jnlp">Foss Quiz</a></p>
 
-</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <footer>
+      <div id='up'>
+        <a href="#topic">
+          <span class="fa-lg fa-stack">
+            <i class="fa fa-chevron-up fa-stack-1x fa-inverse" style="color:#303030;z-index:2;"></i>
+            <i class="fa fa-square fa-stack-2x" id="clg" style="color:white;"></i>
+          </span>
+        </a>
+      </div>
+      <div id="cm">
+        <h3>About Me</h3>
+        <h4>I am a coder, a tech enthusiast and a gamer.</h4>
+      </div>
+      <div id="cm">
+        <h3>Contact Me</h3>
+        <span>
+          <a href="">
+            <span class="fa-lg fa-stack" id='lg'>
+              <i class="fa fa-facebook fa-stack-1x fa-inverse" id="in"></i>
+              <i class="fa fa-circle fa-stack-2x" id="out"></i>
+            </span>
+          </a>
+        </span>
+        <span>
+          <a href="">
+            <span class="fa-lg fa-stack">
+              <i class="fa fa-github fa-stack-1x fa-inverse" id="in" style="z-index:2;"></i>
+              <i class="fa fa-circle fa-stack-2x" id="out"></i>
+            </span>
+          </a>
+        </span>
+        <span>
+          <a href="">
+            <span class="fa-lg fa-stack">
+              <i class="fa fa-twitter fa-stack-1x fa-inverse" id="in" style="z-index:2;"></i>
+              <i class="fa fa-circle fa-stack-2x" id="out"></i>
+            </span>
+          </a>
+        </span>
+        <span>
+          <a href="">
+            <span class="fa-lg fa-stack">
+              <i class="fa fa-envelope fa-stack-1x fa-inverse" id="in" style="z-index:2;"></i>
+              <i class="fa fa-circle fa-stack-2x" id="out"></i>
+            </span>
+          </a>
+        </span>
+      </div>
+      <span id="bug">Made by Baidyanath.<hr style="color:transparent;border-color:transparent;background-color:transparent;"> If you find a bug <i class="fa fa-bug fa-fw"></i> feel free to report it</span>
+    </footer>
+    <script>
+      function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+        document.getElementById("menu").onclick = closeNav;
+        scrollTop = $(window).scrollTop();
+        $('#H').removeClass('whiteb');
+        $('#H').addClass('blackb');
+        if(scrollTop==0)
+        {
+          $('#H').addClass('shadow');
+          $('#icon').removeClass('big');
+          $('#icon').addClass('small');
+        }
+
+        $('body').addClass('stop-scrolling');
+        $('body').bind('touchmove', function(e){e.preventDefault()});
+      }
+
+      function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+        document.getElementById("menu").onclick = openNav;
+        scrollTop = $(window).scrollTop();
+        $('#H').removeClass('blackb');
+        if (scrollTop==0) {
+          $('#H').removeClass('shadow');
+          $('#H').addClass('wtext');
+          $('#icon').removeClass('small');
+          $('#icon').addClass('big');
+        }else {
+          $('#H').addClass('whiteb');
+        }
+
+        $('body').removeClass('stop-scrolling');
+        $('body').unbind('touchmove');
+      }
+    </script>
+  </body>
 </html>
