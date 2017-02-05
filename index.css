@@ -200,7 +200,7 @@ header {
 }
 
 #icon{
-  transition: ease 0.5s;
+  transition: ease 0.1s;
 }
 footer{
   width:100%;
